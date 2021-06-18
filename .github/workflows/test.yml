@@ -13,6 +13,7 @@ jobs:
         run: |
           set -ex
           curl -L -s https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.28.0/crc-macos-amd64.pkg -o operator-sdk
+          ls
       - name: Install CRC
         shell: bash
         run: |
