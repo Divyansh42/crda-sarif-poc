@@ -13,7 +13,7 @@ jobs:
         run: |
           set -ex
           curl -L -s https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.28.0/crc-macos-amd64.pkg -o crc-macos-amd64.pkg
-          tar -zxvf crc-macos-amd64.pkg
+          xar -xvf crc-macos-amd64.pkg
           ls
           installer -dumplog -pkg ./crc.pkg -target /
       # - name: Install CRC
