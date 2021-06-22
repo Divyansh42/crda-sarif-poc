@@ -18,10 +18,10 @@ jobs:
           # xar -xvf crc-macos-amd64.pkg
           cd expand
           ls -a -l
-          tee crc.pkg
           cd crc.pkg
           ls -a -l
-          ls -a -l payload
+          cd payload
+          ls -a -l
           # mkdir
           # sudo installer -dumplog -pkg crc-macos-amd64.pkg -target /
       # - name: Install CRC
