@@ -17,7 +17,7 @@ jobs:
           pkgutil --expand-full crc-macos-amd64.pkg expand
           # xar -xvf crc-macos-amd64.pkg
           cd expand
-          ls -l
+          ls -a -l
           # mkdir
           # sudo installer -dumplog -pkg crc-macos-amd64.pkg -target /
       # - name: Install CRC
