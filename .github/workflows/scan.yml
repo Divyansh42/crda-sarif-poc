@@ -22,7 +22,8 @@ jobs:
         with:
           source: github
           github_pat: ${{ github.token }}
-    
+          crda: "latest"
+
       - name: Run CRDA scan
         run: |
           crda auth -t ${{ secrets.SNYK_TOKEN }}
