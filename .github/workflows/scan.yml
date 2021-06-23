@@ -28,7 +28,10 @@ jobs:
         run: |
           crda config set consent_telemetry true
           crda auth -t ${{ secrets.SNYK_TOKEN }}
-          crda analyse package.json
+          crda analyse -j --verbose package.json > crda.json
+
+      - name: cat report
+        run: cat crda.json
       # - name: Show CRDA and Sarif outputs
       #   run: |
       #     echo CRDA JSON output
