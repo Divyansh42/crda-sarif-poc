@@ -18,7 +18,6 @@ jobs:
       - run: npm install
 
       - name: Run CRDA scan
-        uses: ./
         run: |
           crda auth -t ${{ secrets.SNYK_TOKEN }}
           crda analyse package.json
