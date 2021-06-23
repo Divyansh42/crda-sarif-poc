@@ -27,6 +27,8 @@ jobs:
       - name: Run CRDA scan
         run: |
           crda auth -t ${{ secrets.SNYK_TOKEN }}
+          cat $HOME/.crda/config.yaml
+          echo consent_telemetry: true >> $HOME/.crda/config.yaml
           crda analyse package.json
       # - name: Show CRDA and Sarif outputs
       #   run: |
