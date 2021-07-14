@@ -21,6 +21,7 @@ echo running  $CRDA  auth -t $SNYK_TOKEN
 $CRDA  auth -t $SNYK_TOKEN  >hide-auth.txt
 rm hide-auth.txt 
 echo running  $CRDA analyse -j $FILE
+$CRDA version
 $CRDA analyse -j --verbose  $FILE  > crda.json
 
 echo crda.json generated 
